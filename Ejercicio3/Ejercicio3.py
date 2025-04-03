@@ -11,3 +11,20 @@ naves = [
     {"nombre": "nave8", "longitud": 190, "tripulantes": 22, "pasajeros": 110}
 ]
 
+naves_ordenadas = sorted(naves, key = lambda x: (x["nombre"], - x["longitud"] ))
+
+for nave in naves_ordenadas:
+    print(nave)
+
+seleccion_naves = ["Cometa Veloz", "Titán del Cosmos"]
+for nave in naves:
+    if nave["nombre"] in seleccion_naves:
+        print(nave)
+
+naves_pasajeros = sorted(naves, key=lambda nave: nave['tripulantes'], reverse=True)
+
+naves_pasajeros_ordenada =  naves_pasajeros[:5]
+for nave in naves_pasajeros_ordenada:
+    print(nave)
+
+
